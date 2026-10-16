@@ -32,11 +32,11 @@ Los requests de creación y actualización requieren `nombres` y `apellidos` no 
 
 ### Configuración de SQL Server
 
-Ejecuta [database/sqlserver.sql](./database/sqlserver.sql) en SQL Server para crear la base `empleados` y la tabla `dbo.empleados`. La aplicación espera SQL Server en `localhost:1433`, con usuario `sa` y contraseña `castro`; puedes cambiar estos valores mediante `DB_JDBC_URL`, `DB_USERNAME` y `DB_PASSWORD`. En producción la aplicación valida que la tabla exista y no la crea automáticamente.
+Ejecuta [/script.sql](./script.sql) en SQL Server para crear la base `empleados` y la tabla `dbo.empleados`. La aplicación espera SQL Server en `localhost:1433`, con usuario `sa` y contraseña `castro`; puedes cambiar estos valores mediante `DB_JDBC_URL`, `DB_USERNAME` y `DB_PASSWORD`. En producción la aplicación valida que la tabla exista y no la crea automáticamente.
 
 Los tests usan una base H2 aislada en modo de compatibilidad con SQL Server; no requieren una instancia externa de SQL Server.
 
-La colección de Postman está en [empleados.postman_collection.json](./empleados.postman_collection.json). Importa el archivo en Postman, inicia la aplicación y ejecuta las solicitudes CRUD en orden; la solicitud de registro guarda automáticamente el ID entero para las siguientes.
+El proyecto esta configurado con Swagger: http://localhost:8080/q/swagger-ui/
 
 ## Packaging and running the application
 
